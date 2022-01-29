@@ -5,7 +5,7 @@ import java.util.List;
 Кроссворд
 */
 
-public class FindWordInGrid {
+public class FindWordInGrid2 {
     public static void main(String[] args) {
         int[][] crossword = new int[][]{
                 {'f', 'd', 'e', 'r', 'l', 'k'},
