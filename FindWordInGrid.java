@@ -28,13 +28,18 @@ public class FindWordInGrid {
         int[] nArray = new int[]{-1, 0, 1, -1, 1, -1, 0, 1};
 
         for (int p = 0; p < words.length; p++) {
+            // для каждого слова, которое нужно найти
             for (int i = 0; i < crossword.length; i++) {
                 for (int j = 0; j < crossword[i].length; j++) {
+                    // пробегаем по каждому символу кроссворда
                     if ((char) crossword[i][j] == words[p].charAt(0)) {
                         for (int m = 0, n = 0; m < mArray.length; m++, n++) {
+                            // если символ равен 1-ой букве искомого слова, то ищем в 8-и направлениях 2-ю букву
                             for (int k = 1; k < words[p].length(); k++) {
+                                // для каждой буквы искомого слова
                                 try {
                                     if ((char) crossword[i + (k * mArray[m])][j + (k * nArray[n])] == words[p].charAt(k)) {
+                                        // если вокруг 1-ой буквы слова нашли 2-ю (3-ю, 4-ю...) букву слова
                                         if ((k + 1) == words[p].length()) {
                                             Word word = new Word(words[p]);
                                             word.setStartPoint(j, i);
