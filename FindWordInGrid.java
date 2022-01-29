@@ -1,5 +1,3 @@
-package com.javarush.task.task20.task2027;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,15 +16,12 @@ public class FindWordInGrid {
         };
         detectAllWords(crossword, "home", "same");
         System.out.println(detectAllWords(crossword, "home", "same"));
-        /*
-Ожидаемый результат
-home - (5, 3) - (2, 0)
-same - (1, 1) - (4, 1)
-         */
+                        /*Ожидаемый результат
+                        home - (5, 3) - (2, 0)
+                        same - (1, 1) - (4, 1)*/
     }
 
     public static List<Word> detectAllWords(int[][] crossword, String... words) {
-
 
         List<Word> wordList = new ArrayList<>();
         int[] mArray = new int[]{-1, -1, -1, 0, 0, 1, 1, 1};
